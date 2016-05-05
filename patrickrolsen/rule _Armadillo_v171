@@ -1,0 +1,11 @@
+rule _Armadillo_v171
+{
+meta:
+	Author = "malwarecookbook"
+	description = "Armadillo v1.71"
+	reference = "https://malwarecookbook.googlecode.com/svn-history/r5/trunk/3/4/packer.yara"
+strings:
+	$0 = {55 8B EC 6A FF 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 64 A1}
+condition:
+	$0 at entrypoint
+}
