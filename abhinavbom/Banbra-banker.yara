@@ -2,9 +2,9 @@ rule banbra : banker
 {
 meta: 
     author = "@abhinavbom"
-	maltype = "NA"
-	version = "0.1"
-	date = "8/06/2015"
+    maltype = "NA"
+    version = "0.1"
+    date = "8/06/2015"
 strings: 
     $a = "senha" fullword nocase
     $b = "cartao" fullword nocase

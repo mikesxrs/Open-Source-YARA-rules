@@ -1,13 +1,14 @@
 
+
 //PlugX APT Malware
 
 rule PlugXXOR
 {
 meta:
-	author = "@abhinavbom"
-	maltype = "NA"
-	version = "0.1"
-	date = "21/09/2015"
+     author = "@abhinavbom"
+     maltype = "NA"
+     version = "0.1"
+     date = "21/09/2015"
      description = "rule for PlugX XOR Routine"
      ref1 = "7048add2873b08a9693a60135f978686"
 strings:
@@ -16,15 +17,14 @@ condition:
      all of them
 }
  
- 
  //APT1-Group Rule for sample used during exercise
  
 rule BOUNCER_APT1 {
 meta:
      author = "@abhinavbom"
-	maltype = "NA"
-	version = "0.1"
-	date = "21/09/2015"
+     maltype = "NA"
+     version = "0.1"
+     date = "21/09/2015"
      info = "CommentCrew-threat-apt1"
 strings:
      $s1 = "*Qd9kdgba33*%Wkda0Qd3kvn$*&><(*&%$E#%$#1234asdgKNAg@!gy565dtfbasdg" wide ascii

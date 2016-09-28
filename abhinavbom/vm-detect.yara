@@ -81,3 +81,6 @@ rule vmdetect_misc : vmdetect
 	condition:
 		2 of them
 }
+
+
+
