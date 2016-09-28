@@ -1,4 +1,3 @@
-
 rule android_meterpreter
 {
     meta:
