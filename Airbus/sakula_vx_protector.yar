@@ -1,3 +1,5 @@
+
+
 rule vx_protector  {
     meta:
         description = "vx protector (used as a protection layer by Sakula) - The bytes string match a specific layer of protection inserted manually before the real code. It decrypts the real code and jumps on it."

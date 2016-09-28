@@ -14,3 +14,4 @@ rule sakula_packed_v3_1
     condition:
         all of ($m*) and @m1 < @m2 and @m2 < @m3 and $MZ at @m3+4
 }
+

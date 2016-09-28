@@ -12,3 +12,4 @@ rule sakula_packed_v2_0
     condition:
         all of them
 }
+
