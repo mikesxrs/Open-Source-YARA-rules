@@ -11,7 +11,7 @@ rule callTogether_certificate
 
     reference = "https://www.fireeye.com/blog/threat-research/2014/11/operation-poisoned-handover-unveiling-ties-between-apt-activity-in-hong-kongs-pro-democracy-movement.html"
 
-    description = “detects binaries signed with the CallTogether certificate”
+    description = "detects binaries signed with the CallTogether certificate"
 
   strings:
 
