@@ -34,7 +34,7 @@ rule keydnap_backdoor
 {
     meta:
         description = "Unpacked OSX/Keydnap backdoor"
-        author = "Marc-Etienne M.Léveillé"
+        author = "Marc-Etienne M. Leveille"
         date = "2016-07-06"
         reference = "http://www.welivesecurity.com/2016/07/06/new-osxkeydnap-malware-is-hungry-for-credentials"
         version = "1"

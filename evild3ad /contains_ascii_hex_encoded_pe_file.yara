@@ -1,3 +1,5 @@
+import "pe"
+
 rule Contains_ASCII_Hex_encoded_PE_file
 {
     meta:

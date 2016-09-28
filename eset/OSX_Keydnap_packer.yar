@@ -34,7 +34,7 @@ rule keydnap_backdoor_packer
 {
     meta:
         description = "OSX/Keydnap packed backdoor"
-        author = "Marc-Etienne M.Léveillé"
+        author = "Marc-Etienne M. Leveille"
         date = "2016-07-06"
         reference = "http://www.welivesecurity.com/2016/07/06/new-osxkeydnap-malware-is-hungry-for-credentials"
         version = "1"
@@ -47,4 +47,5 @@ rule keydnap_backdoor_packer
     condition:
         $upx_string and $packer_magic and not $upx_magic
 }
+
 

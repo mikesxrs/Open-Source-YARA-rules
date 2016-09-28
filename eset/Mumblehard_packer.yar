@@ -33,7 +33,7 @@ rule mumblehard_packer
 {
     meta:
         description = "Mumblehard i386 assembly code responsible for decrypting Perl code"
-        author = "Marc-Etienne M.Léveillé"
+        author = "Marc-Etienne M. Leveille"
         date = "2015-04-07"
         reference = "http://www.welivesecurity.com"
         version = "1"

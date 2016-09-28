@@ -1,4 +1,4 @@
-rule CrowdStrike_ PutterPanda _06 : xor_dropper putterpanda
+rule CrowdStrike_PutterPanda_06 : xor_dropper putterpanda
 	{
 	meta:
 		description = "PUTTER PANDA - XOR based dropper"

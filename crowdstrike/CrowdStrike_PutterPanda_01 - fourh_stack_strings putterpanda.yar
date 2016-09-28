@@ -57,5 +57,3 @@ rule CrowdStrike_PutterPanda_01 : fourh_stack_strings putterpanda
 	        )
 	    )
 	}
-	
-

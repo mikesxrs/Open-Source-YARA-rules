@@ -12,13 +12,11 @@ meta:
 
              in_the_wild = true 
 
-             reference = "http://www.crowdstrike.com/blog/cat-scratch-fever-crowdstrike-tracks-newly-reported-iranian-actor-flying-kitten/"
-
        strings: 
 
              $classpath = "Stealer.Properties.Resources.resources" 
 
-             $pdbstr = "\Stealer\obj\x86\Release\Stealer.pdb" 
+             //$pdbstr = "\Stealer\obj\x86\Release\Stealer.pdb" 
 
        condition: 
 

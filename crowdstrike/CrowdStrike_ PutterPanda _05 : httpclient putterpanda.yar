@@ -1,4 +1,4 @@
-rule CrowdStrike_ PutterPanda _05 : httpclient putterpanda
+rule CrowdStrike_PutterPanda_05 : httpclient putterpanda
 	{
 	meta:
 		description = "PUTTER PANDA - HTTPCLIENT"

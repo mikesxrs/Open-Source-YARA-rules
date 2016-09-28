@@ -1,3 +1,5 @@
+import "pe"
+
 rule Contains_ah_encoded_PE_file
 {
 	meta:

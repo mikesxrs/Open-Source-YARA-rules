@@ -10,8 +10,8 @@ rule MIME_MSO_ActiveMime_base64
 		$mime = "MIME-Version:"
 		$base64 = "Content-Transfer-Encoding: base64"
 		$mso = "Content-Type: application/x-mso"
-		$activemime = /Q(\x0D\x0A|)W(\x0D\x0A|)N(\x0D\x0A|)0(\x0D\x0A|)a(\x0D\x0A|)X(\x0D\x0A|)Z(\x0D\x0A|)l(\x0D\x0A|)T(\x0D\x0A|)W/
+		//$activemime = /Q(\x0D\x0A|)W(\x0D\x0A|)N(\x0D\x0A|)0(\x0D\x0A|)a(\x0D\x0A|)X(\x0D\x0A|)Z(\x0D\x0A|)l(\x0D\x0A|)T(\x0D\x0A|)W/
 	
 	condition:
-		$mime at 0 and $base64 and $mso and $activemime
+		$mime at 0 and $base64 and $mso //and $activemime
 }

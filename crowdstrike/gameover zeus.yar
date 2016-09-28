@@ -1,14 +1,19 @@
+/*
+
+//error with rule no $i
+
 rule CrowdStrike_P2P_Zeus
 {
     meta:
         copyright = "CrowdStrike, Inc"
-	author = "Crowdstrike, Inc"
+    author = "Crowdstrike, Inc"
         description = "P2P Zeus (Gameover)"
         version = "1.0"
         last_modified = "2013-11-21"
         actor = "Gameover Spider"
         malware_family = "P2P Zeus"
         in_the_wild = true
+        
     condition:
         any of them or
         for any i in (0..filesize) :
@@ -30,3 +35,5 @@ rule CrowdStrike_P2P_Zeus
             and uint32(i) ^ uint32(i+60) == 0x0a2a748f
         )
 }
+
+*/

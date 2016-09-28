@@ -45,7 +45,7 @@ rule maldoc_structured_exception_handling
     condition:
         any of them
 }
-
+/*
 rule maldoc_indirect_function_call_1
 {
     meta:
@@ -55,7 +55,8 @@ rule maldoc_indirect_function_call_1
     condition:
         for any i in (1..#a): (uint8(@a[i] + 2) == uint8(@a[i] + 5))
 }
-
+*/
+/*
 rule maldoc_indirect_function_call_2
 {
     meta:
@@ -65,7 +66,8 @@ rule maldoc_indirect_function_call_2
     condition:
         for any i in (1..#a): ((uint8(@a[i] + 2) == uint8(@a[i] + 8)) and (uint8(@a[i] + 3) == uint8(@a[i] + 9)) and (uint8(@a[i] + 4) == uint8(@a[i] + 10)) and (uint8(@a[i] + 5) == uint8(@a[i] + 11)))
 }
-
+*/
+/*
 rule maldoc_indirect_function_call_3
 {
     meta:
@@ -75,6 +77,7 @@ rule maldoc_indirect_function_call_3
     condition:
         $a
 }
+*/
 
 rule maldoc_find_kernel32_base_method_1
 {
@@ -86,7 +89,7 @@ rule maldoc_find_kernel32_base_method_1
     condition:
         any of them
 }
-
+/*
 rule maldoc_find_kernel32_base_method_2
 {
     meta:
@@ -96,7 +99,9 @@ rule maldoc_find_kernel32_base_method_2
     condition:
         for any i in (1..#a): ((uint8(@a[i] + 1) >= 0xC0) and (((uint8(@a[i] + 1) & 0x38) >> 3) == (uint8(@a[i] + 1) & 0x07)) and ((uint8(@a[i] + 2) & 0xF8) == 0xA0) and (uint8(@a[i] + 6) <= 0x3F) and (((uint8(@a[i] + 6) & 0x38) >> 3) != (uint8(@a[i] + 6) & 0x07)))
 }
+*/
 
+/*
 rule maldoc_find_kernel32_base_method_3
 {
     meta:
@@ -106,7 +111,9 @@ rule maldoc_find_kernel32_base_method_3
     condition:
         for any i in (1..#a): (((uint8(@a[i] + 5) & 0x07) == (uint8(@a[i] + 8) & 0x07)) and (uint8(@a[i] + 8) <= 0x3F) and (((uint8(@a[i] + 8) & 0x38) >> 3) != (uint8(@a[i] + 8) & 0x07)))
 }
+*/
 
+/*
 rule maldoc_getEIP_method_1
 {
     meta:
@@ -116,7 +123,7 @@ rule maldoc_getEIP_method_1
     condition:
         $a
 }
-
+*/
 rule maldoc_getEIP_method_4
 {
     meta:
