@@ -48,8 +48,6 @@ rule RomeoWhiskey_Two
 		$a in ((pe.sections[pe.section_index(".text")].raw_data_offset)..(pe.sections[pe.section_index(".text")].raw_data_offset + pe.sections[pe.section_index(".text")].raw_data_size))
 }
 
-
-
 rule RomeoWhiskey_One
 {
 	meta:
@@ -85,4 +83,3 @@ rule RomeoWhiskey_One
 	condition:
 		$a in ((pe.sections[pe.section_index(".text")].raw_data_offset)..(pe.sections[pe.section_index(".text")].raw_data_offset + pe.sections[pe.section_index(".text")].raw_data_size))
 }
-

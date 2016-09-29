@@ -2,7 +2,7 @@
 import "pe"
 import "math"
 
-rule apt_ProjectSauron_MyTrampoline  {
+rrule apt_ProjectSauron_MyTrampoline  {
 meta:
 	copyright = "Kaspersky Lab"
 	description = "Rule to detect ProjectSauron MyTrampoline module"

@@ -1,4 +1,3 @@
-
 rule Careto {
 	meta:
 		author = "AlienVault (Alberto Ortega)"
@@ -84,4 +83,3 @@ rule Careto_CnC_domains {
 	condition:
 		any of them
 }
-

@@ -1,4 +1,4 @@
-rule PM_Dyre_Delivery : dyre cryptowall crimeware
+rule PM_Dyre_Delivery1 : dyre cryptowall crimeware
 {
 meta:
     author="R.Tokazowski"

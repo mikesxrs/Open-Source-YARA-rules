@@ -1,4 +1,4 @@
-// Copyright (C) 2013 Claudio "nex" Guarnieri
+ // Copyright (C) 2013 Claudio "nex" Guarnieri
 
 rule vmdetect
 {

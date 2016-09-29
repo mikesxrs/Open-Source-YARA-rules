@@ -64,4 +64,3 @@ rule firewallOpener
 		any of them
 		
 }
-

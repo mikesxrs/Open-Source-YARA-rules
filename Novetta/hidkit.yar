@@ -2,7 +2,7 @@ rule hidkit
 {
 	meta:
 		Author = "Novetta"
-		Reference - "https://www.novetta.com/wp-content/uploads/2014/11/HiKit.pdf"
+		Reference = "https://www.novetta.com/wp-content/uploads/2014/11/HiKit.pdf"
 
 	strings:
 		$a = "---HIDE"

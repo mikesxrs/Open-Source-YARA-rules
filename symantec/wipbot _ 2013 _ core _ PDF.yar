@@ -1,11 +1,11 @@
-rule wipbot _ 2013 _ core _ PDF
+rule wipbot_2013_core_PDF
 {
 	meta:
 		author = "Symantec"
 		description = "Trojan.Wipbot 2014 core PDF"
 		reference = "https://www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/waterbug-attack-group.pdf"
  	strings:
- 		$PDF = “%PDF-”
+ 		$PDF = "%PDF-"
  		$a = /\+[A-Za-z]{1}\. _ _ \$\+[A-Za-z]{1}\. _ \$ _ \+/
  		$b = /\+[A-Za-z]{1}\.\$\$\$ _ \+/
 

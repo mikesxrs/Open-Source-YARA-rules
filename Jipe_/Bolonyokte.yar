@@ -43,4 +43,3 @@ rule Bolonyokte : rat
 	condition:
 		any of ($campaign*) or 2 of ($decoy*) or 2 of ($artifact*) or all of ($func*) or 3 of ($ebanking*)
 }
-

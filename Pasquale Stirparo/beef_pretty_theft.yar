@@ -36,5 +36,3 @@ rule src_ptheft_command {
 	condition:
 		13 of them
 }
-
-

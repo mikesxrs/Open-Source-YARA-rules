@@ -28,4 +28,3 @@ $code =
 condition:
 all of them
 }
-

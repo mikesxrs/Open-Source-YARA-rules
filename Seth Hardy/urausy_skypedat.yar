@@ -1,4 +1,3 @@
-
 rule urausy_skype_dat {
 	meta:
 		author = "AlienVault Labs"
@@ -13,4 +12,3 @@ rule urausy_skype_dat {
 	condition:
 		$a and $b and (all of ($win*) or all of ($desk*))
 }
-

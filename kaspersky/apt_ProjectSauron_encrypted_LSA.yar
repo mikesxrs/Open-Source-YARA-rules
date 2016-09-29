@@ -2,6 +2,7 @@
 import "pe"
 import "math"
 
+
 rule apt_ProjectSauron_encrypted_LSA  {
 meta:
 	copyright = "Kaspersky Lab"

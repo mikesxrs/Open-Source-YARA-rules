@@ -1,11 +1,11 @@
 rule Arcom
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/Arcom"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+    meta:
+        author = " Kevin Breen <kevin@techanarchy.net>"
+        date = "2014/04"
+        ref = "http://malwareconfig.com/stats/Arcom"
+        maltype = "Remote Access Trojan"
+        filetype = "exe"
         
     strings:
         $a1 = "CVu3388fnek3W(3ij3fkp0930di"

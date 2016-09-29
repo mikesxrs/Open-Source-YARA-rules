@@ -1,7 +1,7 @@
 rule jRAT_conf : rat 
 {
 	meta:
-		description = "jRAT" configuration 
+		description = "jRAT configuration"
 		author = "Jean-Philippe Teissier / @Jipe_"
 		date = "2013-10-11"
 		filetype = "memory"
@@ -10,7 +10,7 @@ rule jRAT_conf : rat
 		ref2 = "http://www.ghettoforensics.com/2013/10/dumping-malware-configuration-data-from.html" 
 
 	strings:
-		$a = /port=[0-9]{1,5}SPLIT/ 
+		$a = "/port=[0-9]{1,5}SPLIT/" 
 
 	condition: 
 		$a

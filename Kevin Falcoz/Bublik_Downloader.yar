@@ -11,3 +11,4 @@ rule Bublik : Downloader
 		
 	condition:
 		$signature1 and $signature2
+}

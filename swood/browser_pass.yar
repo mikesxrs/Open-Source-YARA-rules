@@ -8,8 +8,8 @@ rule browser_pass
 {
     meta:
         author = "swood"
-        description = "This module is intended for forensicators and pen-testers to find passwords in memory that can help their case/engagement. 
-        Use for good not evil!" 
+        description = "This module is intended for forensicators and pen-testers to find passwords in memory that can help their case/engagement." 
+        //Use for good not evil!" 
         reference = "https://github.com/swoodsec/YARA-RULES/blob/master/browserpass.yar"
 
     strings:

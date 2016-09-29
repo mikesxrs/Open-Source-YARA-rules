@@ -11,4 +11,3 @@ rule Check_VMWare_DeviceMap
 	condition:
 		all of them
 }
-

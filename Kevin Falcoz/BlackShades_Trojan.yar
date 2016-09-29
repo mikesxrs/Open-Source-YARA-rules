@@ -1,3 +1,5 @@
+import "pe"
+
 rule BlackShades : Trojan
 {
 	meta:

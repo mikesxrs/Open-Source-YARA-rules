@@ -13,4 +13,3 @@ rule embedded_macho
     condition:
         any of ($magic*) and not ($magic1 at 0) and not ($magic2 at 0) and not ($magic3 at 0)
 }
-

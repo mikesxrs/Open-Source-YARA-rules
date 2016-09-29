@@ -89,7 +89,7 @@ strings:
 	$s80 = "zero.cnbct.org"
 	$s81 = "Aventis KlasVayv"
 	$s82 = "KlasVayv" nocase
-	$s82 = "Kodlama by BLaSTER"
+	$s825 = "Kodlama by BLaSTER"
 	$s83 = "TurkGuvenligi"
 	$s84 = "BLaSTER"
 	$s85 = "lama's'hell"

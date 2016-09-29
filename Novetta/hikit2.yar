@@ -2,7 +2,7 @@ rule hikit2
 {
 	meta:
 		Author = "Novetta"
-		Reference - "https://www.novetta.com/wp-content/uploads/2014/11/HiKit.pdf"
+		Reference = "https://www.novetta.com/wp-content/uploads/2014/11/HiKit.pdf"
 
 	strings:
 		$magic1 = {8C 24 24 43 2B 2B 22 13 13 13 00}

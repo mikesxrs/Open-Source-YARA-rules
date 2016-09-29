@@ -1,12 +1,12 @@
 rule NetWire
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/NetWire"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
-		
+    meta:
+        author = " Kevin Breen <kevin@techanarchy.net>"
+        date = "2014/04"
+        ref = "http://malwareconfig.com/stats/NetWire"
+        maltype = "Remote Access Trojan"
+        filetype = "exe"
+        
     strings:
         $string1 = "[Scroll Lock]"
         $string2 = "[Shift Lock]"

@@ -305,4 +305,3 @@ rule Hangover2_Keylogger {
 
     all of them
 }
-

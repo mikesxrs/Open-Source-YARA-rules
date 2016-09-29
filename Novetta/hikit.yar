@@ -2,7 +2,7 @@ rule hikit
 {
 	meta:
 		Author = "Novetta"
-		Reference - "https://www.novetta.com/wp-content/uploads/2014/11/HiKit.pdf"
+		Reference = "https://www.novetta.com/wp-content/uploads/2014/11/HiKit.pdf"
 
 	strings:
 		$hikit_pdb1 = /(H|h)ikit_/

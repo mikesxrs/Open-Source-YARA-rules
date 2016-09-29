@@ -11,8 +11,7 @@ rule Yarochkin
 		$string0 = "blog.yam.com"
 		$string1 = "http://blog.yam.com/minzhu0906/article/54726977"
 		$string2 = "BLOG.YAM.COM"
-		$string3 = ""
-
+		
 	condition:
 		any of them
 

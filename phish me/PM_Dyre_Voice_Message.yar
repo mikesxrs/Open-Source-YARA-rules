@@ -14,4 +14,3 @@ strings:
 condition:
 	2 of them
 }
-

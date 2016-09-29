@@ -1,3 +1,4 @@
+/*
 rule jpg_web_shell
 {
 meta:
@@ -8,8 +9,9 @@ meta:
 strings:
 	$magic = { ff d8 ff e? } // e0, e1, e8
 	$s1 = "<script src"
-	$s2 = "/.*/e"
+	$s2 = "/.*//*e"
 	$s3 = "base64_decode"
 condition:
 	($magic at 0) and 1 of ($s*)
 }  
+*/

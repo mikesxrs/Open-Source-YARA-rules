@@ -13,4 +13,3 @@ x00" in encrypted form
 condition:
 all of them
 }
-

@@ -14,4 +14,3 @@ rule universal_1337_stealer_serveur : Stealer
 	condition:
 		$signature1 and $signature2 or $signature3 and $signature4
 }
-Status API Training Shop Blog About

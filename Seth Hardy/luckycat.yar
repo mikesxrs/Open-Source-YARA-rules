@@ -25,7 +25,7 @@ private rule LuckyCatStrings : LuckyCat Family
         $xorencrypted = { 77 76 75 7B 7A 79 78 7F 7E 7D 7C 73 72 71 70 }
         $tempvbs = "%s\\~temp.vbs"
         $countphp = "count.php\x00"
-        $trojanname = /WMILINK=.*TrojanName=/
+        $trojanname = "/WMILINK=.*TrojanName=/"
         $tmpfile = "d0908076343423d3456.tmp"
         $dirfile = "cmd /c dir /s /a C:\\\\ >'+tmpfolder+'\\\\C.tmp"
         $ipandmac = "objIP.DNSHostName+'_'+objIP.MACAddress.split(':').join('')+'_'+addinf+'@')"

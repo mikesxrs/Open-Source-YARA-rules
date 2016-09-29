@@ -31,4 +31,3 @@ rule Intel_Virtualization_Wizard_dll {
   condition:
     ($a and $b) and Intel_Virtualization_Wizard_exe
 }
-Status API Training Shop Blog About

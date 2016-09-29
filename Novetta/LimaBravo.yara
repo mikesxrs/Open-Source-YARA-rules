@@ -1,5 +1,3 @@
-import "pe"
-
 rule LimaBravo
 {
 	meta:

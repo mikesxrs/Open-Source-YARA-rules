@@ -15,9 +15,9 @@ rule NanoCore
         $e = "KeepAlive"
         $f = "IPNETROW"
         $g = "LogClientMessage"
-		$h = "|ClientHost"
-		$i = "get_Connected"
-		$j = "#=q"
+        $h = "|ClientHost"
+        $i = "get_Connected"
+        $j = "#=q"
         $key = {43 6f 24 cb 95 30 38 39}
 
 

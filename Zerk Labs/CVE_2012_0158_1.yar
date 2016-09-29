@@ -75,4 +75,3 @@ rule CVE_2012_0158_3 {
   condition:
     $a or ($b and $c and $d and $e and $f)
 }
-Status API Training Shop Blog About

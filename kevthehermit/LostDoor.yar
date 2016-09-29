@@ -1,14 +1,14 @@
 rule LostDoor
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/LostDoor"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+    meta:
+        author = " Kevin Breen <kevin@techanarchy.net>"
+        date = "2014/04"
+        ref = "http://malwareconfig.com/stats/LostDoor"
+        maltype = "Remote Access Trojan"
+        filetype = "exe"
         
     strings:
-    	$a0 = {0D 0A 2A 45 44 49 54 5F 53 45 52 56 45 52 2A 0D 0A}
+        $a0 = {0D 0A 2A 45 44 49 54 5F 53 45 52 56 45 52 2A 0D 0A}
         $a1 = "*mlt* = %"
         $a2 = "*ip* = %"
         $a3 = "*victimo* = %"
@@ -20,5 +20,5 @@ rule LostDoor
         $b9 = "RC4Decrypt" wide ascii
         
     condition:
-    	all of ($a*) or all of ($b*)
+        all of ($a*) or all of ($b*)
 }

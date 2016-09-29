@@ -26,7 +26,6 @@ private rule OlyxStrings : Olyx Family
     condition:
         any of them
 }
-
 rule Olyx : Family
 {
     meta:

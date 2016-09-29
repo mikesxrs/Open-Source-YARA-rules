@@ -14,9 +14,9 @@ rule HawkEye
 		$string2 = "holdermail.txt" wide
 		$string3 = "wallet.dat" wide
 		$string4 = "Keylog Records" wide
-    $string5 = "<!-- do not script -->" wide
-    $string6 = "\\pidloc.txt" wide
-    $string7 = "BSPLIT" wide
+   		$string5 = "<!-- do not script -->" wide
+  		$string6 = "\\pidloc.txt" wide
+  		$string7 = "BSPLIT" wide
 
 	condition:
 		$key and $salt and all of ($string*)

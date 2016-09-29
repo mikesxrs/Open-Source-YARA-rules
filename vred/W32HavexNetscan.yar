@@ -17,7 +17,7 @@ rule W32HavexNetscan
 		reference = "https://github.com/vred/yara-rule-havex-netscan/blob/master/havex-netscan.yar"
 	strings:
 		$file = "~tracedscn.yls" wide nocase 
-		$p1 = { 0A F1 2? } 	// Rslinx 44818 only selected 
+		//$p1 = { 0A F1 2? } 	// Rslinx 44818 only selected 
 	condition:
-		($file) and ($p1)
+		($file)// and ($p1)
 }

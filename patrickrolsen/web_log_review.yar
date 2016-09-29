@@ -50,4 +50,3 @@ strings:
 condition:
 	any of ($s*)
 }
-

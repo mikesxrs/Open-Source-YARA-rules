@@ -305,5 +305,3 @@ rule Hangover2_Keylogger {
 
     all of them
 }
-
-Status API Training Shop Blog About

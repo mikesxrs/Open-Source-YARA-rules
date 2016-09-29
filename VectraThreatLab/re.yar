@@ -2,9 +2,9 @@ rule anti_dbg {
     meta:
         author = "x0r"
         description = "Checks if being debugged"
-	version = "0.2"
+    version = "0.2"
     strings:
-    	$d1 = "Kernel32.dll" nocase
+        $d1 = "Kernel32.dll" nocase
         $c1 = "CheckRemoteDebuggerPresent" 
         $c2 = "IsDebuggerPresent" 
         $c3 = "OutputDebugString" 
@@ -18,7 +18,7 @@ rule anti_dbgtools {
     meta:
         author = "x0r"
         description = "Checks for the presence of known debug tools"
-	version = "0.1"
+    version = "0.1"
     strings:
         $f1 = "procexp.exe" nocase
         $f2 = "procmon.exe" nocase
@@ -137,11 +137,11 @@ rule antisb_joesanbox {
      meta:
         author = "x0r"
         description = "Anti-Sandbox checks for Joe Sandbox"
-	version = "0.1"
+    version = "0.1"
     strings:
-	$p1 = "Software\\Microsoft\\Windows\\CurrentVersion" nocase
-	$c1 = "RegQueryValue" 
-	$s1 = "55274-640-2673064-23950" 
+    $p1 = "Software\\Microsoft\\Windows\\CurrentVersion" nocase
+    $c1 = "RegQueryValue" 
+    $s1 = "55274-640-2673064-23950" 
     condition:
         all of them
 }
@@ -150,7 +150,7 @@ rule antisb_anubis {
     meta:
         author = "x0r"
         description = "Anti-Sandbox checks for Anubis"
-	version = "0.1"
+    version = "0.1"
     strings:
         $p1 = "Software\\Microsoft\\Windows\\CurrentVersion" nocase
         $c1 = "RegQueryValue" 
@@ -164,7 +164,7 @@ rule antisb_threatExpert {
     meta:
         author = "x0r"
         description = "Anti-Sandbox checks for ThreatExpert"
-	version = "0.1"
+    version = "0.1"
     strings:
         $f1 = "dbghelp.dll" nocase 
     condition:
@@ -175,7 +175,7 @@ rule antisb_sandboxie {
     meta:
         author = "x0r"
         description = "Anti-Sandbox checks for Sandboxie"
-	version = "0.1"
+    version = "0.1"
     strings:
         $f1 = "SbieDLL.dll" nocase 
     condition:
@@ -186,7 +186,7 @@ rule antisb_cwsandbox {
     meta:
         author = "x0r"
         description = "Anti-Sandbox checks for CWSandbox"
-	version = "0.1"
+    version = "0.1"
     strings:
         $p1 = "Software\\Microsoft\\Windows\\CurrentVersion" nocase
         $s1 = "76487-644-3177037-23510" 
@@ -198,7 +198,7 @@ rule antivm_virtualbox {
     meta:
         author = "x0r"
         description = "AntiVM checks for VirtualBox"
-	version = "0.1"
+    version = "0.1"
     strings:
         $s1 = "VBoxService.exe" nocase
     condition:
@@ -209,7 +209,7 @@ rule antivm_vmware {
     meta:
         author = "x0r"
         description = "AntiVM checks for VMWare"
-	version = "0.1"
+    version = "0.1"
     strings:
         $s1 = "vmware.exe" nocase
         $s2 = "vmware-authd.exe" nocase
@@ -218,7 +218,7 @@ rule antivm_vmware {
         $s5 = "vmware-vmx.exe" nocase
         $s6 = "vmnetdhcp.exe" nocase
         $s7 = "vpxclient.exe" nocase
-    	$s8 = { b868584d56bb00000000b90a000000ba58560000ed }
+        $s8 = { b868584d56bb00000000b90a000000ba58560000ed }
     condition:
         any of them
 }
@@ -227,7 +227,7 @@ rule antivm_bios {
     meta:
         author = "x0r"
         description = "AntiVM checks for Bios version"
-	version = "0.2"
+    version = "0.2"
     strings:
         $p1 = "HARDWARE\\DESCRIPTION\\System" nocase
         $p2 = "HARDWARE\\DESCRIPTION\\System\\BIOS" nocase
@@ -243,7 +243,7 @@ rule disable_antivirus {
     meta:
         author = "x0r"
         description = "Disable AntiVirus"
-	version = "0.2"
+    version = "0.2"
     strings:
         $p1 = "Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\DisallowRun" nocase
         $p2 = "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\" nocase
@@ -274,7 +274,7 @@ rule disable_uax {
     meta:
         author = "x0r"
         description = "Disable User Access Control"
-	version = "0.1"
+    version = "0.1"
     strings:
         $p1 = "SOFTWARE\\Microsoft\\Security Center" nocase
         $r1 = "UACDisableNotify"
@@ -286,7 +286,7 @@ rule disable_firewall {
     meta:
         author = "x0r"
         description = "Disable Firewall"
-	version = "0.1"
+    version = "0.1"
     strings:
         $p1 = "SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy" nocase
         $c1 = "RegSetValue" 
@@ -302,7 +302,7 @@ rule disable_registry {
     meta:
         author = "x0r"
         description = "Disable Registry editor"
-	version = "0.1"
+    version = "0.1"
     strings:
         $p1 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System" nocase
         $c1 = "RegSetValue" 
@@ -316,7 +316,7 @@ rule disable_dep {
     meta:
         author = "x0r"
         description = "Bypass DEP"
-	version = "0.1"
+    version = "0.1"
     strings:
         $c1 = "EnableExecuteProtectionSupport" 
         $c2 = "NtSetInformationProcess" 
@@ -331,7 +331,7 @@ rule disable_taskmanager {
     meta:
         author = "x0r"
         description = "Disable Task Manager"
-	version = "0.1"
+    version = "0.1"
     strings:
         $p1 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System" nocase
         $r1 = "DisableTaskMgr" 
@@ -343,7 +343,7 @@ rule inject_thread {
     meta:
         author = "x0r"
         description = "Code injection with CreateRemoteThread in a remote process"
-	version = "0.1"
+    version = "0.1"
     strings:
         $c1 = "OpenProcess" 
         $c2 = "VirtualAllocEx" 
@@ -360,7 +360,7 @@ rule create_process {
     meta:
         author = "x0r"
         description = "Create a new process"
-	version = "0.2"
+    version = "0.2"
     strings:
         $f1 = "Shell32.dll" nocase
         $f2 = "Kernel32.dll" nocase
@@ -376,7 +376,7 @@ rule persistence {
     meta:
         author = "x0r"
         description = "Install itself for autorun at Windows startup"
-	version = "0.1"
+    version = "0.1"
     strings:
         $p1 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" nocase
         $p2 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\RunOnce" nocase
@@ -391,7 +391,7 @@ rule persistence {
         $p11 = "piffile\\shell\\open\\command" nocase
         $p12 = "exefile\\shell\\open\\command" nocase
         $p13 = "txtfile\\shell\\open\\command" nocase
-	$p14 = "\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options"
+    $p14 = "\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options"
         $f1 = "win.ini" nocase
         $f2 = "system.ini" nocase
         $f3 = "Start Menu\\Programs\\Startup" nocase
@@ -403,7 +403,7 @@ rule hijack_network {
     meta:
         author = "x0r"
         description = "Hijack network configuration"
-	version = "0.1"
+    version = "0.1"
     strings:
         $p1 = "SOFTWARE\\Classes\\PROTOCOLS\\Handler" nocase
         $p2 = "SOFTWARE\\Classes\\PROTOCOLS\\Filter" nocase
@@ -418,9 +418,9 @@ rule create_service {
     meta:
         author = "x0r"
         description = "Create a windows service"
-	version = "0.2"
+    version = "0.2"
     strings:
-	$f1 = "Advapi32.dll" nocase
+    $f1 = "Advapi32.dll" nocase
         $c1 = "CreateService" 
         $c2 = "ControlService" 
         $c3 = "StartService" 
@@ -433,7 +433,7 @@ rule create_com_service {
     meta:
         author = "x0r"
         description = "Create a COM server"
-	version = "0.1"
+    version = "0.1"
     strings:
         $c1 = "DllCanUnloadNow" nocase
         $c2 = "DllGetClassObject" 
@@ -448,10 +448,10 @@ rule network_udp_sock {
     meta:
         author = "x0r"
         description = "Communications over UDP network"
-	version = "0.1"
+    version = "0.1"
     strings:
         $f1 = "Ws2_32.dll" nocase
-	$f2 = "System.Net" nocase
+    $f2 = "System.Net" nocase
         $f3 = "wsock32.dll" nocase
         $c0 = "WSAStartup" 
         $c1 = "sendto" 
@@ -467,11 +467,11 @@ rule network_tcp_listen {
     meta:
         author = "x0r"
         description = "Listen for incoming communication"
-	version = "0.1"
+    version = "0.1"
     strings:
         $f1 = "Ws2_32.dll" nocase
         $f2 = "Mswsock.dll" nocase
-	    $f3 = "System.Net" nocase
+        $f3 = "System.Net" nocase
         $f4 = "wsock32.dll" nocase
         $c1 = "bind" 
         $c2 = "accept" 
@@ -491,9 +491,9 @@ rule network_dyndns {
     meta:
         author = "x0r"
         description = "Communications dyndns network"
-	version = "0.1"
-    strings:	
-	$s1 =".no-ip.org"
+    version = "0.1"
+    strings:    
+    $s1 =".no-ip.org"
         $s2 =".publicvm.com"
         $s3 =".linkpc.net"
         $s4 =".dynu.com"
@@ -534,9 +534,9 @@ rule network_toredo {
     meta:
         author = "x0r"
         description = "Communications over Toredo network"
-	version = "0.1"
-    strings:	
-	$f1 = "FirewallAPI.dll" nocase
+    version = "0.1"
+    strings:    
+    $f1 = "FirewallAPI.dll" nocase
         $p1 = "\\CurrentControlSet\\Services\\Tcpip6\\Parameters\\Interfaces\\" nocase
     condition:
         all of them
@@ -546,9 +546,9 @@ rule network_smtp_dotNet {
     meta:
         author = "x0r"
         description = "Communications smtp"
-	version = "0.1"
-    strings:	
-	$f1 = "System.Net.Mail" nocase
+    version = "0.1"
+    strings:    
+    $f1 = "System.Net.Mail" nocase
         $p1 = "SmtpClient" nocase
     condition:
         all of them
@@ -558,9 +558,9 @@ rule network_smtp_raw {
     meta:
         author = "x0r"
         description = "Communications smtp"
-	version = "0.1"
-    strings:	
-	$s1 = "MAIL FROM:" nocase
+    version = "0.1"
+    strings:    
+    $s1 = "MAIL FROM:" nocase
         $s2 = "RCPT TO:" nocase
     condition:
         all of them
@@ -570,9 +570,9 @@ rule network_smtp_vb {
     meta:
         author = "x0r"
         description = "Communications smtp"
-	version = "0.1"
-    strings:	
-	$c1 = "CDO.Message" nocase
+    version = "0.1"
+    strings:    
+    $c1 = "CDO.Message" nocase
         $c2 = "cdoSMTPServer" nocase
         $c3 = "cdoSendUsingMethod" nocase
         $c4 = "cdoex.dll" nocase
@@ -585,28 +585,28 @@ rule network_p2p_win {
     meta:
         author = "x0r"
         description = "Communications over P2P network"
-	version = "0.1"
-    strings:	
-     	$c1 = "PeerCollabExportContact"
-     	$c2 = "PeerCollabGetApplicationRegistrationInfo"
-     	$c3 = "PeerCollabGetEndpointName"
-     	$c4 = "PeerCollabGetEventData"
-     	$c5 = "PeerCollabGetInvitationResponse"
-     	$c6 = "PeerCollabGetPresenceInfo"
-     	$c7 = "PeerCollabGetSigninOptions"
-     	$c8 = "PeerCollabInviteContact"
-     	$c9 = "PeerCollabInviteEndpoint"
-     	$c10 = "PeerCollabParseContact"
-     	$c11 = "PeerCollabQueryContactData"
-     	$c12 = "PeerCollabRefreshEndpointData"
-     	$c13 = "PeerCollabRegisterApplication"
-     	$c14 = "PeerCollabRegisterEvent"
-     	$c15 = "PeerCollabSetEndpointName"
-     	$c16 = "PeerCollabSetObject"
-     	$c17 = "PeerCollabSetPresenceInfo"
-     	$c18 = "PeerCollabSignout"
-     	$c19 = "PeerCollabUnregisterApplication"
-     	$c20 = "PeerCollabUpdateContact"
+    version = "0.1"
+    strings:    
+        $c1 = "PeerCollabExportContact"
+        $c2 = "PeerCollabGetApplicationRegistrationInfo"
+        $c3 = "PeerCollabGetEndpointName"
+        $c4 = "PeerCollabGetEventData"
+        $c5 = "PeerCollabGetInvitationResponse"
+        $c6 = "PeerCollabGetPresenceInfo"
+        $c7 = "PeerCollabGetSigninOptions"
+        $c8 = "PeerCollabInviteContact"
+        $c9 = "PeerCollabInviteEndpoint"
+        $c10 = "PeerCollabParseContact"
+        $c11 = "PeerCollabQueryContactData"
+        $c12 = "PeerCollabRefreshEndpointData"
+        $c13 = "PeerCollabRegisterApplication"
+        $c14 = "PeerCollabRegisterEvent"
+        $c15 = "PeerCollabSetEndpointName"
+        $c16 = "PeerCollabSetObject"
+        $c17 = "PeerCollabSetPresenceInfo"
+        $c18 = "PeerCollabSignout"
+        $c19 = "PeerCollabUnregisterApplication"
+        $c20 = "PeerCollabUpdateContact"
     condition:
         5 of them
 }
@@ -615,7 +615,7 @@ rule network_tor {
     meta:
         author = "x0r"
         description = "Communications over TOR network"
-	version = "0.1"
+    version = "0.1"
     strings:
         $p1 = "tor\\hidden_service\\private_key" nocase
         $p2 = "tor\\hidden_service\\hostname" nocase
@@ -628,7 +628,7 @@ rule network_irc {
     meta:
         author = "x0r"
         description = "Communications over IRC network"
-	version = "0.1"
+    version = "0.1"
     strings:
         $s1 = "NICK" 
         $s2 = "PING" 
@@ -643,7 +643,7 @@ rule network_http {
     meta:
         author = "x0r"
         description = "Communications over HTTP"
-	version = "0.1"
+    version = "0.1"
     strings:
         $f1 = "wininet.dll" nocase
         $c1 = "InternetConnect" 
@@ -662,7 +662,7 @@ rule network_dropper {
     meta:
         author = "x0r"
         description = "File downloader/dropper" 
-	version = "0.1"
+    version = "0.1"
     strings:
         $f1 = "urlmon.dll" nocase
         $c1 = "URLDownloadToFile" 
@@ -677,9 +677,9 @@ rule network_ftp {
     meta:
         author = "x0r"
         description = "Communications over FTP" 
-	version = "0.1"
+    version = "0.1"
     strings:
-	   $f1 = "Wininet.dll" nocase
+       $f1 = "Wininet.dll" nocase
         $c1 = "FtpGetCurrentDirectory" 
         $c2 = "FtpGetFile" 
         $c3 = "FtpPutFile" 
@@ -701,9 +701,9 @@ rule network_tcp_socket {
     meta:
         author = "x0r"
         description = "Communications over RAW socket"
-	version = "0.1"
+    version = "0.1"
     strings:
-	$f1 = "Ws2_32.dll" nocase
+    $f1 = "Ws2_32.dll" nocase
         $f2 = "wsock32.dll" nocase
         $c1 = "WSASocket" 
         $c2 = "socket" 
@@ -722,17 +722,17 @@ rule network_dns {
     meta:
         author = "x0r"
         description = "Communications use DNS"
-	version = "0.1"
+    version = "0.1"
     strings:
         $f1 = "System.Net" 
         $f2 = "Ws2_32.dll" nocase
         $f3 = "Dnsapi.dll" nocase
         $f4 = "wsock32.dll" nocase        
         $c2 = "GetHostEntry" 
-	    $c3 = "getaddrinfo"
-	    $c4 = "gethostbyname"
-	    $c5 = "WSAAsyncGetHostByName"
-	    $c6 = "DnsQuery"
+        $c3 = "getaddrinfo"
+        $c4 = "gethostbyname"
+        $c5 = "WSAAsyncGetHostByName"
+        $c6 = "DnsQuery"
     condition:
         1 of ($f*) and  1 of ($c*) 
 }
@@ -755,11 +755,11 @@ rule network_dga {
     meta:
         author = "x0r"
         description = "Communication using dga"
-	version = "0.1"
+    version = "0.1"
     strings: 
         $dll1 = "Advapi32.dll" nocase
         $dll2 = "wininet.dll" nocase
-	    $dll3 = "Crypt32.dll" nocase
+        $dll3 = "Crypt32.dll" nocase
         $time1 = "SystemTimeToFileTime"  
         $time2 = "GetSystemTime"  
         $time3 = "GetSystemTimeAsFileTime"  
@@ -771,7 +771,7 @@ rule network_dga {
         $net3 = "gethostbyname"  
         $net4 = "getaddrinfo"  
     condition:
-        all of ($dll*) and 1 of ($time*) and 1 of ($hash*) and 1 of ($net*)	
+        all of ($dll*) and 1 of ($time*) and 1 of ($hash*) and 1 of ($net*) 
 }
 
 
@@ -779,16 +779,16 @@ rule bitcoin {
     meta:
         author = "x0r"
         description = "Perform crypto currency mining"
-	version = "0.1"
+    version = "0.1"
     strings:
         $f1 = "OpenCL.dll" nocase
         $f2 = "nvcuda.dll" nocase
         $f3 = "opengl32.dll" nocase
         $s1 = "cpuminer 2.2.2X-Mining-Extensions"
         $s2 = "cpuminer 2.2.3X-Mining-Extensions"
-	    $s3 = "Ufasoft bitcoin-miner/0.20"
-	    $s4 = "bitcoin" nocase
-	    $s5 = "stratum" nocase
+        $s3 = "Ufasoft bitcoin-miner/0.20"
+        $s4 = "bitcoin" nocase
+        $s5 = "stratum" nocase
     condition:
         1 of ($f*) and 1 of ($s*)
 }
@@ -797,20 +797,20 @@ rule certificate {
     meta:
         author = "x0r"
         description = "Inject certificate in store"
-	version = "0.1"
+    version = "0.1"
     strings:
         $f1 = "Crypt32.dll" nocase
         $r1 = "software\\microsoft\\systemcertificates\\spc\\certificates" nocase
         $c1 = "CertOpenSystemStore" 
     condition:
-	all of them
+    all of them
 }
 
 rule escalate_priv {
     meta:
         author = "x0r"
         description = "Escalade priviledges"
-	version = "0.1"
+    version = "0.1"
     strings:
         $d1 = "Advapi32.dll" nocase
         $c1 = "SeDebugPrivilege" 
@@ -823,7 +823,7 @@ rule screenshot {
     meta:
         author = "x0r"
         description = "Take screenshot"
-	version = "0.1"
+    version = "0.1"
     strings:
         $d1 = "Gdi32.dll" nocase
         $d2 = "User32.dll" nocase
@@ -837,7 +837,7 @@ rule lookupip {
     meta:
         author = "x0r"
         description = "Lookup external IP"
-	version = "0.1"
+    version = "0.1"
     strings:
         $n1 = "checkip.dyndns.org" nocase
         $n2 = "whatismyip.org" nocase
@@ -852,7 +852,7 @@ rule dyndns {
     meta:
         author = "x0r"
         description = "Dynamic DNS"
-	version = "0.1"
+    version = "0.1"
     strings:
         $s1 = "SOFTWARE\\Vitalwerks\\DUC" nocase
     condition:
@@ -863,7 +863,7 @@ rule lookupgeo {
     meta:
         author = "x0r"
         description = "Lookup Geolocation"
-	version = "0.1"
+    version = "0.1"
     strings:
         $n1 = "j.maxmind.com" nocase
     condition:
@@ -874,9 +874,9 @@ rule keylogger {
     meta:
         author = "x0r"
         description = "Run a keylogger"
-	version = "0.1"
+    version = "0.1"
     strings:
-	    $f1 = "User32.dll" nocase
+        $f1 = "User32.dll" nocase
         $c1 = "GetAsyncKeyState" 
         $c2 = "GetKeyState" 
         $c3 = "MapVirtualKey" 
@@ -889,7 +889,7 @@ rule cred_local {
     meta:
         author = "x0r"
         description = "Steal credential"
-	version = "0.1"
+    version = "0.1"
     strings:
         $c1 = "LsaEnumerateLogonSessions"
         $c2 = "SamIConnect"
@@ -925,7 +925,7 @@ rule cred_ff {
     meta:
         author = "x0r"
         description = "Steal Firefox credential"
-	version = "0.1"
+    version = "0.1"
     strings:
         $f1 = "signons.sqlite"
         $f2 = "signons3.txt"
@@ -940,7 +940,7 @@ rule cred_vnc {
     meta:
         author = "x0r"
         description = "Steal VNC credential"
-	version = "0.1"
+    version = "0.1"
     strings:
         $s1 = "VNCPassView"
     condition:
@@ -951,7 +951,7 @@ rule cred_ie7 {
     meta:
         author = "x0r"
         description = "Steal IE 7 credential"
-	version = "0.1"
+    version = "0.1"
     strings:
         $f1 = "Crypt32.dll" nocase
         $c1 = "CryptUnprotectData" 
@@ -964,7 +964,7 @@ rule sniff_lan {
     meta:
         author = "x0r"
         description = "Sniff Lan network traffic"
-	version = "0.1"
+    version = "0.1"
     strings:
         $f1 = "packet.dll" nocase
         $f2 = "npf.sys" nocase
@@ -978,7 +978,7 @@ rule migrate_apc {
     meta:
         author = "x0r"
         description = "APC queue tasks migration"
-	version = "0.1"
+    version = "0.1"
     strings:
         $c1 = "OpenThread" 
         $c2 = "QueueUserAPC" 
@@ -990,7 +990,7 @@ rule spreading_file {
     meta:
         author = "x0r"
         description = "Malware can spread east-west file"
-	version = "0.1"
+    version = "0.1"
     strings:
         $f1 = "autorun.inf" nocase
         $f2 = "desktop.ini" nocase
@@ -1016,7 +1016,7 @@ rule rat_vnc {
     meta:
         author = "x0r"
         description = "Remote Administration toolkit VNC"
-	version = "0.1"
+    version = "0.1"
     strings:
         $f1 = "ultravnc.ini" nocase
         $c2 = "StartVNC" 
@@ -1029,7 +1029,7 @@ rule rat_rdp {
     meta:
         author = "x0r"
         description = "Remote Administration toolkit enable RDP"
-	version = "0.1"
+    version = "0.1"
     strings:
         $p1 = "SYSTEM\\CurrentControlSet\\Control\\Terminal Server" nocase
         $p2 = "software\\microsoft\\windows nt\\currentversion\\terminal server" nocase
@@ -1069,7 +1069,7 @@ rule check_patchlevel {
     meta:
         author = "x0r"
         description = "Check if hotfix are applied"
-	version = "0.1"
+    version = "0.1"
     strings:
         $p1 = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Hotfix" nocase
     condition:

@@ -24,4 +24,3 @@ F7 ) E?
 condition:
 all of them
 }
-

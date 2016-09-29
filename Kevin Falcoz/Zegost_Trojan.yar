@@ -12,4 +12,3 @@ rule Zegost : Trojan
 	condition:
 		$signature1 and $signature2
 }
-Status API Training Shop Blog About

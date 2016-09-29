@@ -1,7 +1,7 @@
 rule OrcaRAT
   {
   meta:  
-         author = “PwC Cyber Threat Operations   :: @tlansec"
+         author = "PwC Cyber Threat Operations   :: @tlansec"
          distribution = "TLP WHITE"
          sha1 =   "253a704acd7952677c70e0c2d787791b8359efe2c92a5e77acea028393a85613"
   strings:

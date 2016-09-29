@@ -1,10 +1,10 @@
 rule skeleton_key_patcher
 {
-	meta:
-		author = "secureworks"
-		reference = "https://www.secureworks.com/research/skeleton-key-malware-analysis"
+       meta:
+              author = "secureworks"
+              reference = "https://www.secureworks.com/research/skeleton-key-malware-analysis"
 
-	strings:
+       strings:
        $target_process = "lsass.exe" wide
        $dll1 = "cryptdll.dll"
        $dll2 = "samsrv.dll"
@@ -15,6 +15,6 @@ rule skeleton_key_patcher
        $patched2 = "SamIRetrievePrimaryCredentials"
        $patched3 = "SamIRetrieveMultiplePrimaryCredentials"
 
-	condition:
+       condition:
        all of them
 }

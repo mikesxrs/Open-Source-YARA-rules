@@ -1,4 +1,3 @@
-
 rule KINS_dropper {
 	meta:
 		author = "AlienVault Labs aortega@alienvault.com"
@@ -43,4 +42,3 @@ rule KINS_DLL_zeus {
 	condition:
 		all of ($n*) and 1 of ($s*)
 }
-

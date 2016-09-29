@@ -6,7 +6,7 @@ private rule PlugXBootLDRCode : PlugX Family
         last_modified = "2014-06-12"
         
     strings:
-        $callpop = { E8 00 00 00 00 58 }
+        //$callpop = { E8 00 00 00 00 58 }
         // Compares [eax+n] to GetProcAdd, one character at a time. This goes up to GetP:
         $GetProcAdd = { 80 38 47 75 36 80 78 01 65 75 30 80 78 02 74 75 2A 80 78 03 50 }
         // Load these function strings 4 characters at a time. These check the first two blocks:
@@ -19,7 +19,7 @@ private rule PlugXBootLDRCode : PlugX Family
         $L4_memcpy = { C7 ( ?? ?? | ?? ?? ?? ?? ?? ) 6D 65 6D 63 66 C7 ( ?? ?? | ?? ?? ?? ?? ?? ) 70 79 }
         
     condition:
-        ($callpop at 0) or $GetProcAdd or (all of ($L4_*))
+        /*($callpop at 0) or*/ $GetProcAdd or (all of ($L4_*))
 }
 
 private rule PlugXStrings : PlugX Family

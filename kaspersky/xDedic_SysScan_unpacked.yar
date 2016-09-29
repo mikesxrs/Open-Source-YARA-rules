@@ -23,3 +23,4 @@ rule xDedic_SysScan_unpacked {
 		((uint16(0) == 0x5A4D)) and (filesize < 5000000) and
 		((any of ($a*)) or (all of ($b*)))
 }
+

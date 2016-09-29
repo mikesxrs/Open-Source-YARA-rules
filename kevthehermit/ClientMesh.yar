@@ -13,7 +13,7 @@ rule ClientMesh
         $string4 = "sendbrowserpasswords"
         $string5 = "arma2keyMass"
         $string6 = "keylogger"
-        $conf = {00 00 00 00 00 00 00 00 00 7E}
+        /*$conf = {00 00 00 00 00 00 00 00 00 7E}*/
 
     condition:
         all of them

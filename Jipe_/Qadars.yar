@@ -24,4 +24,3 @@ rule qadars : banker
 	condition:
 		all of ($cmd*) or $nofilter or any of ($botherderphonenumber*)
 }
-

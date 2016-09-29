@@ -1,4 +1,4 @@
-Lightweight_Backdoor_5:
+rule Lightweight_Backdoor_5
 
 {
 

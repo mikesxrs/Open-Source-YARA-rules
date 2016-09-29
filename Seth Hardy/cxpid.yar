@@ -30,6 +30,7 @@ private rule cxpidStrings : cxpid Family
        any of them
 }
 
+
 rule cxpid : Family
 {
     meta:

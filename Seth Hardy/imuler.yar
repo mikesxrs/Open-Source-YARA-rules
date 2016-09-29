@@ -48,6 +48,7 @@ private rule IMulerStrings : IMuler Family
         any of them
 }
 
+
 rule IMuler : Family
 {
     meta:

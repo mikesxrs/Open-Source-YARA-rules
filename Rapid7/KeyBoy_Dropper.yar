@@ -15,4 +15,3 @@ rule KeyBoy_Dropper
     condition:  
         all of them  
 }  
-  
