@@ -1,0 +1,13 @@
+rule TinyLoaderSample
+{
+	meta:
+		Description  = "Malware.TinyLoader.vb"
+		ThreatLevel  = "5"
+
+	strings:
+
+		$ = "B1 Tiny Loader/1.0" ascii wide
+
+	condition:
+		all of them
+}

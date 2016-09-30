@@ -1,0 +1,15 @@
+rule PWSPasswordsToDBApp
+{
+	meta:
+		Description  = "PWS.PassDB.sm"
+		ThreatLevel  = "5"
+
+	strings:
+
+		$pdb0 = "PasswordsToDB.pdb" ascii wide
+		$ipa0 = "82.146.47.116" ascii wide
+		$ipa1 = "82.146.54.187" ascii wide
+
+	condition:
+		any of them
+}
