@@ -665,3 +665,82 @@ C7 44 24 ?? 0? 00 00 00
 condition:
 all of them
 }
+
+rule Cadelle_1
+{
+meta:
+	author = "Symantec"
+	reference = "http://www.symantec.com/content/en/us/enterprise/media/security_response/docs/CadelSpy-Remexi-IOC.pdf"
+strings:
+	$s1 = { 56 57 8B F8 8B F1 33 C0 3B F0 74 22 39 44 24 0C 74 18 0F B7 0F 66 3B C8 74 10 66 89 0A 42 42 47 47 4E FF 4C 24 0C 3B F0 75 E2 3B F0 75 07 4A 4A B8 7A 00 07 80 33 C9 5F 66 89 0A 5E C2 04 00}
+	$s2 = "ntsvc32"
+	$s3 = "ntbind32"
+condition:
+	$s1 and ($s2 or $s3)
+}
+
+rule Cadelle_2
+{
+meta:
+	author = "Symantec"
+	reference = "http://www.symantec.com/content/en/us/enterprise/media/security_response/docs/CadelSpy-Remexi-IOC.pdf"
+strings:
+	$s1  = "[EXECUTE]" wide ascii
+	$s2  = "WebCamCapture" wide ascii
+	$s3  = "</DAY>" wide ascii
+	$s4  ="</DOCUMENT>" wide ascii
+	$s5  = "<DOCUMENT>" wide ascii
+	$s6  = "<DATETIME>" wide ascii
+	$s7  = "Can't open file for reading :" wide ascii
+	$s8  = "</DATETIME>" wide ascii
+	$s9  = "</USERNAME>" wide ascii
+	$s10 = "JpegFile :" wide ascii
+	$s12 = "[SCROLL]" wide ascii
+	$s13 = "<YEAR>" wide ascii
+	$s14 = "CURRENT DATE" wide ascii
+	$s15 = "</YEAR>" wide ascii
+	$s16 = "</MONTH>" wide ascii
+	$s17 = "<PRINTERNAME>" wide ascii
+	$s18 = "</DRIVE>" wide ascii
+	$s19 = "<DATATYPE>" wide ascii
+	$s20 = "<MACADDRESS>" wide ascii
+	$s21 = "FlashMemory" wide ascii
+condition:
+	12 of them
+}
+
+rule Cadelle_3
+{
+meta:
+	author = "Symantec"
+	reference = "http://www.symantec.com/content/en/us/enterprise/media/security_response/docs/CadelSpy-Remexi-IOC.pdf"
+strings:
+	$s1  = "SOFTWARE\\ntsvc32\\HDD" wide ascii
+	$s2  = "SOFTWARE\\ntsvc32\\ROU" wide ascii
+	$s3  = "SOFTWARE\\ntsvc32\\HST" wide ascii
+	$s4  = "SOFTWARE\\ntsvc32\\FLS" wide ascii
+	$s5  = "ntsvc32" wide ascii
+	$s6  = ".Win$py." wide ascii
+	$s7  = "C:\\users\\" wide ascii
+	$s8  = "%system32%" wide ascii
+	$s9  = "\\Local Settings\\Temp" wide ascii
+	$s10 = "SVWATAUAVAW" wide ascii
+	$s11 = "\\AppData\\Local" wide ascii
+	$s12 = "\\AppData" wide ascii
+condition:
+	6 of them
+}
+
+rule Cadelle_4
+{
+meta:
+	author = "Symantec"
+	reference = "http://www.symantec.com/content/en/us/enterprise/media/security_response/docs/CadelSpy-Remexi-IOC.pdf"
+strings:
+	$s1 = "AppInit_DLLs" wide ascii
+	$s2 = { 5C 00 62 00 61 00 63 00 6B 00 75 00 70 00 00 }
+	$s3 = { 5C 00 75 00 70 00 64 00 61 00 74 00 65 00 00 }
+	$s4 = "\\cmd.exe" wide ascii
+condition:
+	all of them
+}
