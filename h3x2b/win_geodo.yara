@@ -1,0 +1,35 @@
+import "cuckoo"
+
+rule geodo_malware
+{
+	condition:
+		cuckoo.network.http_request(/http:\/\/64\.207\.134\.54:8080/)
+		or cuckoo.network.http_request(/http:\/\/72\.52\.150\.60:8080/)
+		or cuckoo.network.http_request(/http:\/\/88\.208\.192\.116:8080/)
+		or cuckoo.network.http_request(/http:\/\/88\.208\.228\.111:8080/)
+		or cuckoo.network.http_request(/http:\/\/94\.23\.28\.211:8080/)
+		or cuckoo.network.http_request(/http:\/\/94\.23\.192\.208:8080/)
+		or cuckoo.network.http_request(/http:\/\/103\.228\.200\.37:8080/)
+		or cuckoo.network.http_request(/http:\/\/103\.228\.200\.47:8080/)
+		or cuckoo.network.http_request(/http:\/\/103\.245\.153\.70:8080/)
+		or cuckoo.network.http_request(/http:\/\/106\.187\.103\.213:8080/)
+		or cuckoo.network.http_request(/http:\/\/119\.59\.124\.163:8080/)
+		or cuckoo.network.http_request(/http:\/\/134\.213\.133\.96:8080/)
+		or cuckoo.network.http_request(/http:\/\/142\.4\.18\.239:8080/)
+		or cuckoo.network.http_request(/http:\/\/158\.255\.238\.18:8080/)
+		or cuckoo.network.http_request(/http:\/\/158\.255\.238\.209:8080/)
+		or cuckoo.network.http_request(/http:\/\/162\.144\.35\.78:8080/)
+		or cuckoo.network.http_request(/http:\/\/162\.144\.45\.246:8080/)
+		or cuckoo.network.http_request(/http:\/\/162\.144\.77\.164:8080/)
+		or cuckoo.network.http_request(/http:\/\/162\.144\.88\.73:8080/)
+		or cuckoo.network.http_request(/http:\/\/188\.126\.72\.179:8080/)
+		or cuckoo.network.http_request(/http:\/\/192\.163\.208\.168:8080/)
+		or cuckoo.network.http_request(/http:\/\/192\.163\.239\.60:8080/)
+		or cuckoo.network.http_request(/http:\/\/195\.219\.57\.34:8080/)
+		or cuckoo.network.http_request(/http:\/\/197\.85\.182\.110:8080/)
+		or cuckoo.network.http_request(/http:\/\/198\.1\.122\.176:8080/)
+		or cuckoo.network.http_request(/http:\/\/200\.159\.128\.6:8080/)
+		or cuckoo.network.http_request(/http:\/\/200\.159\.128\.132:8080/)
+		or cuckoo.network.http_request(/http:\/\/202\.44\.54\.3:8080/)
+		or cuckoo.network.http_request(/http:\/\/209\.250\.6\.60:8080/)
+}

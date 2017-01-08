@@ -1,0 +1,20 @@
+import "magic"
+
+rule asprox_av_signature
+{
+	meta:
+		author = "@h3x2b <tracker _AT h3x.eu>"
+		description = "Search for #Asprox/Kuluoz #malware downloader"
+		// "2GVWNQJz1"
+
+	condition:
+		new_file and
+		//file_type contains "peexe" and
+		uint16(0) == 0x5a4d and
+		(
+			signatures matches /Kuluoz/
+			or signatures matches /Asprox/
+			or signatures matches /KULUOZ/
+			or signatures matches /ASPROX/
+		)
+}

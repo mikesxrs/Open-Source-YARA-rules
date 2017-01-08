@@ -1,0 +1,49 @@
+import "pe"
+rule plugx_korplug_av_signature : APT malware
+{
+	meta:
+		author = "@h3x2b <tracker _AT h3x.eu>"
+		description = "Hint about new Korplug/PlugX detections"
+
+	strings:
+		$sfx = "SFX module"
+
+
+	condition:
+		// Search for #Korplug samples
+		//new_file and
+		uint16(0) == 0x5a4d
+		//and file_type contains "pe"
+		and pe.characteristics & pe.DLL
+		and $sfx
+		and (
+			signatures matches /Korplug/
+			or signatures matches /PlugX/
+		)
+
+}
+
+
+/*
+rule Kazy_av_signature_dll : APT malware
+{
+	meta:
+		author = "@h3x2b <tracker _AT h3x.eu>"
+		description = "Search for Kazy DLL samples"
+
+	strings:
+		$sfx = "SFX module"
+
+	condition:
+		//new_file and
+		uint16(0) == 0x5a4d and
+		( $sfx or 
+		//file_type contains "pedll"
+		pe.characteristics & pe.DLL
+		)
+		and ( signatures matches /Kazy/ )
+		and filesize < 10000
+}
+*/
+
+
