@@ -1,6 +1,8 @@
 rule Lionrock_Powershell
 {
 meta:
+  author = "Cylance"
+  description = "Lionrock backdoor"
   reference = "https://www.cylance.com/en_us/blog/baijiu.html"
 strings:
   $http = "hffbZ]]"
@@ -12,6 +14,8 @@ condition:
 rule Typhoon_Downloader
 {
 meta:
+  author = "Cylance"
+  description = "Typhoon downloader"
   reference = "https://www.cylance.com/en_us/blog/baijiu.html"
 strings:
   $ps = "<<<:resource"
@@ -27,6 +31,8 @@ condition:
 rule Lionrock_Loader
 {
 meta:
+  author = "Cylance"
+  description = "Lionrock Loader"
   reference = "https://www.cylance.com/en_us/blog/baijiu.html"
 strings:
   $a = "sfarfdk|amiqd|s"
@@ -39,6 +45,8 @@ condition:
 rule Lionrock_Backdoor
 {
 meta:
+  author = "Cylance"
+  description = "Lionrock Backdoor"
   reference = "https://www.cylance.com/en_us/blog/baijiu.html"
 strings:
   $a = "windows\\currentversion\\run;reglist"
