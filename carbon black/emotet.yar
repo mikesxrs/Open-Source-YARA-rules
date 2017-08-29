@@ -10,6 +10,8 @@ date = "2017-August-22"
 
 description = "Emotet Word Document Dropper utilizing embedded Comments and Custom Properties Fields"
 
+reference = "https://www.carbonblack.com/2017/08/28/threat-analysis-word-documents-embedded-macros-leveraging-emotet-trojan/"
+
 yara_version = "3.5.0"
 
 exemplar_hashes = "20ca01986dd741cb475dd0312a424cebb53f1201067938269f2e746fb90d7c2e, c7cab605153ac4718af23d87c506e46b8f62ee2bc7e7a3e6140210c0aeb83d48, 3ca148e6d17868544170351c7e0dbef38e58de9435a2f33fe174c83ea9a5a7f5"
