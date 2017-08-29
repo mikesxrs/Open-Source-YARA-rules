@@ -9,6 +9,8 @@ meta:
       date = "2017-June-11"
 
       description = "Dropper tool that extracts payload from PNG resources"
+      
+      reference = "https://www.carbonblack.com/2017/08/18/threat-analysis-carbon-black-threat-research-dissects-png-dropper/"
 
       yara_version = "3.5.0"
 
