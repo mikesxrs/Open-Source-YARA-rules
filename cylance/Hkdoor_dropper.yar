@@ -2,7 +2,7 @@ import "pe"
 
 rule hkdoor_dropper {
     meta:
-        description = "Hacker’s Door Dropper"
+        description = "Hacker's Door Dropper"
         author = "Cylance"
         reference = "https://www.cylance.com/en_us/blog/threat-spotlight-opening-hackers-door.html"
 
