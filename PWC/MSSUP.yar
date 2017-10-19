@@ -9,10 +9,10 @@ meta:
        date="2014-09-11"
 
        hash="8083ee212588a05d72561eebe83c57bb"
+       
+       reference = "http://pwc.blogs.com/cyber_security_updates/2014/09/malware-microevolution.html"
 
- 
-
-strings:
+ strings:
 
        $debug1="d:\\Programming\\CSharp\\BlackBerry\\BlackBerry\\obj\\Debug\\MSSUP.pdb" nocase
 
