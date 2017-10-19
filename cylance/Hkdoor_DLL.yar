@@ -1,9 +1,10 @@
+
 import "pe"
 
 rule hkdoor_backdoor_dll {
     meta:
         author = "Cylance"
-        description = "Hacker’s Door Backdoor DLL"
+        description = "Hacker's Door Backdoor DLL"
         reference = "https://www.cylance.com/en_us/blog/threat-spotlight-opening-hackers-door.html"
 
     strings:
@@ -14,11 +15,8 @@ rule hkdoor_backdoor_dll {
         $s5 = "SeLoadDriverPrivilege" fullword ascii
 
     condition:
-        uint16(0) == 0x5a4d and
-        filesize < 400KB and
-        ( 3 of ($s*) ) and
-        pe.characteristics & pe.DLL and
-        pe.imports("ws2_32.dll", "WSAStartup") and
-        pe.imports("ws2_32.dll", "sendto")
+        uint16(0) == 0x5a4d and filesize < 400KB and ( 3 of ($s*) ) and pe.characteristics & pe.DLL and pe.imports("ws2_32.dll", "WSAStartup") and pe.imports("ws2_32.dll", "sendto")
 }
+
+
 
