@@ -1,7 +1,7 @@
 rule hkdoor_driver {
     meta:
         author = "Cylance"
-        description = "Hacker’s Door Driver"
+        description = "Hacker's Door Driver"
         reference = "https://www.cylance.com/en_us/blog/threat-spotlight-opening-hackers-door.html"
 
     strings:
