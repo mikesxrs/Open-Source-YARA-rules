@@ -21,3 +21,4 @@ rule hkdoor_backdoor {
       uint16(0) == 0x5a4d and
       filesize < 400KB and
       ( 4 of ($s*) )
+}
