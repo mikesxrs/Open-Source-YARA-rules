@@ -1,4 +1,4 @@
-mport "pe"
+import "pe"
 
 rule hkdoor_backdoor_dll {
     meta:
@@ -21,3 +21,4 @@ rule hkdoor_backdoor_dll {
         pe.imports("ws2_32.dll", "WSAStartup") and
         pe.imports("ws2_32.dll", "sendto")
 }
+
