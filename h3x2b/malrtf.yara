@@ -67,3 +67,45 @@ rule malrtf_pe_embedded : exploit
 		3 of ($rtf_payload_*)
 }
 
+rule malrtf_ole2link_cve_2017_0199 : exploit
+{
+	meta:
+		author = "@h3x2b <tracker _AT h3x.eu>"
+		description = "Detect weaponized RTF documents with OLE2Link exploit to URL Moniker HTA handling CVS-2017-0199"
+
+	strings:
+		//having \objautlink structure
+		$rtf_olelink_01 = "\\objautlink" nocase wide ascii
+
+		//having \objdata structure
+		$rtf_olelink_02 = "\\objdata" nocase wide ascii
+
+		//hex encoded OLE2Link
+		$rtf_olelink_03 = "4f4c45324c696e6b" nocase wide ascii
+
+		//hex encoded StdOleLink
+		$rtf_olelink_04 = "5374644f6c654c696e6b" nocase wide ascii
+
+		//hex encoded docfile magic - doc file albilae
+		$rtf_olelink_05 = "d0cf11e0a1b11ae1" nocase wide ascii
+
+                //GUID of URL Moniker
+                $rtf_payload_01 = "e0c9ea79f9bace118c8200aa004ba90b" nocase wide ascii
+
+		//hex encoded "http://"
+		$rtf_payload_02 = "68007400740070003a002f002f00" nocase wide ascii
+
+		//hex encoded "https://"
+		$rtf_payload_03 = "680074007400700073003a002f002f00" nocase wide ascii
+
+		//hex encoded "ftp://"
+		$rtf_payload_04 = "6600740070003a002f002f00" nocase wide ascii
+
+
+	condition:
+		//new_file and
+		//normal rtf header is {\rtf1, malformed rtf can have for example {\\rtA1
+		uint32be(0) == 0x7B5C7274
+		and 3 of ($rtf_olelink_*)
+		and any of ($rtf_payload_*)
+}
