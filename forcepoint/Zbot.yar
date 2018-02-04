@@ -4,6 +4,7 @@ rule crime_win_zbot_memory_dev_ws
         description = "ZBot & variants - configuration _unpack routine detection"
         author = "Nick Griffin (Websense)"
         yaraexchange = "No distribution without author's consent"
+        reference = "https://blogs.forcepoint.com/security-labs/crimeware-based-targeted-attacks-citadel-case-part-iii"
         date = "2014-04"
         filetype = "memory"
         md5 = "4d175203db0f269f9d86d2677ac859cf"
