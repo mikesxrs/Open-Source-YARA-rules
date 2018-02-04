@@ -7,6 +7,8 @@ rule bankbot_polish_banks : banker
         hash0 = "86aaed9017e3af5d1d9c8460f2d8164f14e14db01b1a278b4b93859d3cf982f5"
         description = "BankBot/Mazain attacking polish banks"
         reference = "https://www.cert.pl/en/news/single/analysis-of-a-polish-bankbot/"
+        reference2 = "https://www.welivesecurity.com/2017/12/11/banking-malware-targets-polish-banks/"
+        reference3 = "https://www.riskiq.com/blog/labs/mobile-bankbot/"
     strings:
         $bank1 = "com.comarch.mobile"
         $bank2 = "eu.eleader.mobilebanking.pekao"
