@@ -109,3 +109,68 @@ rule nautilus_common_strings {
    (uint16(0) == 0x5A4D and uint16(uint32(0x3c)) == 0x4550) and 3 of them
 } 
 
+rule nautilus_common_strings {
+ meta:
+  description = "Rule for detection of Nautilus based on common plaintext strings"
+  author = "NCSC UK"
+  reference = "https://www.ncsc.gov.uk/file/2691/download?token=RzXWTuAB"
+  reference2 = "https://www.ncsc.gov.uk/alerts/turla-group-malware"
+  hash = "a415ab193f6cd832a0de4fcc48d5f53d6f0b06d5e13b3c359878c6c31f3e7ec3"
+ strings:
+  $ = "nautilus-service.dll" ascii
+  $ = "oxygen.dll" ascii
+  $ = "config_listen.system" ascii
+  $ = "ctx.system" ascii
+  $ = "3FDA3998-BEF5-426D-82D8-1A71F29ADDC3" ascii
+  $ = "C:\\ProgramData\\Microsoft\\Windows\\Caches\\{%s}.2.ver0x0000000000000001.db" ascii
+ condition:
+  (uint16(0) == 0x5A4D and uint16(uint32(0x3c)) == 0x4550) and 3 of them
+} 
+
+rule neuron2_loader_strings {
+ meta:
+  description = "Rule for detection of Neuron2 based on strings within the loader"
+  author = "NCSC"
+  reference = "https://www.ncsc.gov.uk/file/2768/download?token=An2Ro6YZ"
+  reference2 = "https://www.ncsc.gov.uk/alerts/turla-group-malware"
+  hash = "51616b207fde2ff1360a1364ff58270e0d46cf87a4c0c21b374a834dd9676927"
+ strings:
+  $ = "dcom_api" ascii
+  $ = "http://*:80/OWA/OAB/" ascii
+  $ = "https://*:443/OWA/OAB/" ascii
+  $ = "dcomnetsrv.cpp" wide
+  $ = "dcomnet.dll" ascii
+  $ = "D:\\Develop\\sps\\neuron2\\x64\\Release\\dcomnet.pdb" ascii
+ condition:
+  (uint16(0) == 0x5A4D and uint16(uint32(0x3c)) == 0x4550) and 2 of them
+}
+
+rule neuron2_decryption_routine {
+ meta:
+  description = "Rule for detection of Neuron2 based on the routine used to decrypt the payload"
+  author = "NCSC"
+  reference = "https://www.ncsc.gov.uk/file/2768/download?token=An2Ro6YZ"
+  reference2 = "https://www.ncsc.gov.uk/alerts/turla-group-malware"
+  hash = "51616b207fde2ff1360a1364ff58270e0d46cf87a4c0c21b374a834dd9676927"
+ strings:
+  $ = {81 FA FF 00 00 00 0F B6 C2 0F 46 C2 0F B6 0C 04 48 03 CF 0F B6 D1 8A 0C 14 8D 50 01 43 32 0C 13 41 88 0A 49 FF C2 49 83 E9 01}
+ condition:
+  (uint16(0) == 0x5A4D and uint16(uint32(0x3c)) == 0x4550) and all of them
+}
+
+rule neuron2_dotnet_strings {
+ meta:
+  description = "Rule for detection of the .NET payload for Neuron2 based on strings used"
+  author = "NCSC"
+  reference = "https://www.ncsc.gov.uk/file/2768/download?token=An2Ro6YZ"
+  reference2 = "https://www.ncsc.gov.uk/alerts/turla-group-malware"
+  hash = "83d8922e7a8212f1a2a9015973e668d7999b90e7000c31f57be83803747df015"
+ strings:
+  $dotnetMagic = "BSJB" ascii
+  $s1 = "http://*:80/W3SVC/" wide
+  $s2 = "https://*:443/W3SVC/" wide
+  $s3 = "neuron2.exe" ascii
+  $s4 = "D:\\Develop\\sps\\neuron2\\neuron2\\obj\\Release\\neuron2.pdb" ascii
+ condition:
+  (uint16(0) == 0x5A4D and uint16(uint32(0x3c)) == 0x4550) and $dotnetMagic and 2 of ($s*)
+}
