@@ -13,8 +13,8 @@ rule SamSam_Ransomware_Latest
       hash4 = "88d24b497cfeb47ec6719752f2af00c802c38e7d4b5d526311d552c6d5f4ad34"
       hash5 = "8eabfa74d88e439cfca9ccabd0ee34422892d8e58331a63bea94a7c4140cf7ab"
       hash6 = "88e344977bf6451e15fe202d65471a5f75d22370050fe6ba4dfa2c2d0fae7828"
+
    strings:
-strings:
       $s1 = "bedf08175d319a2f879fe720032d11e5" fullword wide
       $s2 = "ksdghksdghkddgdfgdfgfd" fullword ascii
       $s3 = "osieyrgvbsgnhkflkstesadfakdhaksjfgyjqqwgjrwgehjgfdjgdffg" fullword ascii
