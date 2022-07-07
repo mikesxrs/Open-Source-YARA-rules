@@ -1,3 +1,5 @@
+import "pe"
+
 rule apt_win_freshfire : APT29
 {
     meta:
