@@ -1,3 +1,5 @@
+import "pe"
+
 rule Mal_Infostealer_Win32_Jupyter_Main_Module
 {
     meta:
