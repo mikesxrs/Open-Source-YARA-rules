@@ -1,0 +1,21 @@
+rule ElectroRAT
+{
+  strings:
+      $str1 = "registerUser.go"
+      $str2 = "osinfo.go"
+      $str3 = "machineid.go"
+      $str4 = "downloadFile.go"
+      $str5 = "hidefile_windows.go"
+      $str6 = "systemcl.go"
+      $str7 = "bin_linux.go"
+      $str8 = "processKill.go"
+      $str9 = "screenshot.go"
+      $str10 = "uploadFolder.go"
+      $str11 = "bin_windows.go"
+      $str12 = "mdworker.go"
+      $str13 = "bin_darwin.go"
+      $str14 = "hidefile.go"
+
+  condition:
+     3 of them
+}
