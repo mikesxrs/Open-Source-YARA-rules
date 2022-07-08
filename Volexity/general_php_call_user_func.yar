@@ -3,7 +3,7 @@ rule general_php_call_user_func : General Webshells
     meta:
         author = "threatintel@volexity.com"
         description = "Webshells using call_user_func against an object from a file input or POST variable."
-        reference = "https://www.volexity.com/blog/2022/06/15/driftingcloud-zero-day-sophos-firewall-exploitation-and-an-insidious-breach/"
+        reference2 = "https://www.volexity.com/blog/2022/06/15/driftingcloud-zero-day-sophos-firewall-exploitation-and-an-insidious-breach/"
         date = "2021-06-16"
         hash1 = "40b053a2f3c8f47d252b960a9807b030b463ef793228b1670eda89f07b55b252"
         reference = "https://zhuanlan.zhihu.com/p/354906657"
