@@ -1,0 +1,16 @@
+rule apt_win_rokload : InkySquid
+{
+    meta:
+        author = "threatintel@volexity.com"
+        date = "2021-06-23"
+        description = "A shellcode loader used to decrypt and run an embedded executable."
+        reference = "https://www.volexity.com/blog/2021/08/24/north-korean-bluelight-special-inkysquid-deploys-rokrat/"
+        hash = "85cd5c3bb028fe6931130ccd5d0b0c535c01ce2bcda660a3b72581a1a5382904"
+        license = "See license at https://github.com/volexity/threat-intel/blob/main/LICENSE.txt"
+        
+    strings:
+        $bytes00 = { 48 ?? ?? ?? ?? 48 ?? ?? ?? ?? 48 ?? ?? ?? ?? 57 41 54 41 55 41 56 41 57 48 ?? ?? ?? b9 ?? ?? ?? ?? 33 ff e8 ?? ?? ?? ?? b9 ?? ?? ?? ?? 4c 8b e8 e8 ?? ?? ?? ?? 4c 8b f0 41 ff d6 b9 ?? ?? ?? ?? 44 8b f8 e8 ?? ?? ?? ?? 4c 8b e0 e8 ?? ?? ?? ?? 48 }
+    
+    condition:
+        $bytes00 at 0
+}
