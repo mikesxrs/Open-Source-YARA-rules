@@ -2,7 +2,7 @@ rule PyInstaller_Binary
 {
 meta:
 	author = "ThreatStream Labs"
-	desc = "Generic rule to identify PyInstaller Compiled Binaries”
+	desc = "Generic rule to identify PyInstaller Compiled Binaries"
 strings:
 	$string0 = "zout00-PYZ.pyz"
 	$string1 = "python"
