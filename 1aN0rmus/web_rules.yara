@@ -106,7 +106,7 @@ meta:
 	author = "@patrickrolsen"
 	maltype = "Zend Framework"
 	version = "0.3"
-	date = ""12/29/2013""
+	date = "12/29/2013"
 strings:
 	$mz = { 4d 5a } // MZ
 	$php = "<?php"
